@@ -80,12 +80,12 @@ public class CoolWeatherDB {
 		}
 		return list;
 	}
-	public void saveCounty(Country county) {
-		if (county != null) {
+	public void saveCountry(Country country) {
+		if (country != null) {
 			ContentValues values = new ContentValues();
-			values.put("country_name", county.getCountryName());
-			values.put("country_code", county.getCountryCode());
-			values.put("city_id", county.getCityId());
+			values.put("country_name", country.getCountryName());
+			values.put("country_code", country.getCountryCode());
+			values.put("city_id", country.getCityId());
 			db.insert("Country", null, values);
 		}
 	}
